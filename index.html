@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="一份可以翻阅、搜索球员的足球电子杂志。">
+  <title>DFB · 德国队球员图鉴</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="FOOTBALL JOURNAL 首页"><span class="brand-mark">F.</span><span>FOOTBALL<br>JOURNAL</span></a>
+    <span class="top-note">A FOOTBALL PLAYER DIRECTORY</span>
+    <a class="pdf-link" href="magazine/magazine.pdf" target="_blank" rel="noopener">打开原版 PDF <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="intro">
+      <p class="eyebrow"><span class="live-dot"></span> DIGITAL EDITION <span class="eyebrow-date" id="edition-date">VOL. 01 · 2026</span></p>
+      <h1>德国队，<em>翻开</em>来看。</h1>
+      <p class="intro-copy">一页页认识球员，直接跳到你想看的那一页。</p>
+    </section>
+
+    <section class="reader-shell" aria-label="杂志阅读器">
+      <div class="reader-toolbar">
+        <div class="issue-label"><span class="issue-dot"></span><span id="issue-title">FOOTBALL JOURNAL</span></div>
+        <div class="toolbar-controls">
+          <button class="icon-button" id="prev-page" aria-label="上一页" title="上一页">←</button>
+          <span class="page-count"><span id="page-current">—</span><span class="page-divider">/</span><span id="page-total">—</span></span>
+          <button class="icon-button" id="next-page" aria-label="下一页" title="下一页">→</button>
+          <span class="toolbar-separator"></span>
+          <button class="icon-button fullscreen-button" id="fullscreen" aria-label="全屏阅读" title="全屏阅读">⛶</button>
+        </div>
+      </div>
+      <div class="book-stage" id="book-stage">
+        <div class="book-loading" id="book-message">
+          <div class="empty-cover"><span class="cover-kicker">YOUR NEXT ISSUE</span><span class="cover-title">THE<br>GAME<br><i>GOES ON.</i></span><span class="cover-foot">A FOOTBALL JOURNAL</span><span class="cover-ball">◉</span></div>
+          <div class="empty-note"><span class="empty-icon">＋</span><h2>你的杂志即将登场</h2><p>把 PDF 放入 <code>magazine/magazine.pdf</code><br>再刷新页面，即可开始翻阅。</p><a href="README.md#替换杂志" class="text-link">查看替换说明 <span>→</span></a></div>
+        </div>
+        <div id="book" class="book" aria-label="足球杂志页面"></div>
+      </div>
+      <div class="reader-footer"><span>拖动页角或使用箭头翻页</span><span class="footer-hint">DESIGNED FOR THE LOVE OF THE GAME</span></div>
+    </section>
+
+    <section class="discovery">
+      <div class="section-heading"><div><p class="eyebrow">EXPLORE THE ISSUE</p><h2>找到你的球员</h2></div><p class="section-aside">搜索姓名，直接跳到他出现的那一页。</p></div>
+      <div class="search-wrap"><span class="search-icon" aria-hidden="true">⌕</span><input id="player-search" type="search" placeholder="搜索球员，例如 Lionel Messi" autocomplete="off" aria-label="搜索球员"><kbd>⌘ K</kbd></div>
+      <div id="search-results" class="search-results" aria-live="polite"><p class="search-hint">输入球员姓名开始搜索</p></div>
+      <div class="contents-heading"><div><p class="eyebrow">QUICK ACCESS</p><h3>目录与专题</h3></div><button id="show-contents" class="text-button">全部目录 <span>↗</span></button></div>
+      <nav id="contents" class="contents-grid" aria-label="杂志目录"></nav>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand footer-brand" href="#top"><span class="brand-mark">F.</span><span>FOOTBALL<br>JOURNAL</span></a><span>MADE FOR THE LOVE OF THE GAME.</span><a href="README.md">关于这本杂志 ↗</a></footer>
+
+  <template id="search-result-template"><button class="result-card"><span class="result-avatar">F</span><span class="result-main"><strong></strong><small></small></span><span class="result-page"></span><span class="result-arrow">↗</span></button></template>
+  <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

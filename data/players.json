@@ -1,0 +1,22 @@
+{
+  "issueTitle": "DFB · 德国队球员图鉴",
+  "edition": "GERMANY · PLAYER DIRECTORY",
+  "players": [
+    { "name": "Florian Wirtz", "aliases": ["弗洛里安·维尔茨", "维尔茨", "Wirtz"], "page": 4, "note": "德国 · 中场" },
+    { "name": "Kai Havertz", "aliases": ["凯·哈弗茨", "哈弗茨", "Havertz"], "page": 4, "note": "德国 · 前锋" },
+    { "name": "Joshua Kimmich", "aliases": ["约书亚·基米希", "基米希", "Kimmich"], "page": 5, "note": "德国 · 中场" },
+    { "name": "Nathaniel Brown", "aliases": ["纳撒尼尔·布朗", "布朗"], "page": 5, "note": "德国 · 后卫" },
+    { "name": "Tom Bischof", "aliases": ["汤姆·比绍夫", "比绍夫", "Bischof"], "page": 6, "note": "德国 · 中场" },
+    { "name": "Alexander Pavlovic", "aliases": ["亚历山大·帕夫洛维奇", "帕夫洛维奇", "Pavlovic"], "page": 6, "note": "德国 · 中场" },
+    { "name": "Nico Schlotterbeck", "aliases": ["尼科·施洛特贝克", "施洛特贝克", "Schlotterbeck"], "page": 7, "note": "德国 · 后卫" },
+    { "name": "Wael Mohya", "aliases": ["瓦埃尔·莫亚", "莫亚", "Mohya"], "page": 7, "note": "德国 · 青年球员" }
+  ],
+  "contents": [
+    { "title": "目录", "subtitle": "CONTENTS", "page": 2 },
+    { "title": "德国成年国家队图鉴", "subtitle": "SENIOR NATIONAL TEAM", "page": 3 },
+    { "title": "球员档案 · 上篇", "subtitle": "PLAYER PROFILES", "page": 4 },
+    { "title": "球员档案 · 下篇", "subtitle": "PLAYER PROFILES", "page": 6 },
+    { "title": "德国青年队", "subtitle": "YOUTH NATIONAL TEAM", "page": 8 },
+    { "title": "后记与制作信息", "subtitle": "CLOSING PAGES", "page": 12 }
+  ]
+}
